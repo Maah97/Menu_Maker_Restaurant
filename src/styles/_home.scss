@@ -1,0 +1,86 @@
+.home-page {
+    margin-top: 70px;
+    .presentation {
+        background-color: #FFF4E8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+        padding: 50px 100px;
+        .txt-presentation {
+           h2 {
+                font-size: 40px;
+                margin-bottom: 20px;
+           }
+           P {
+                font-size: 18px;
+                margin-bottom: 20px;
+                text-align: justify;
+           }
+           .btn-commencer {
+                background-color: #FF7B00;
+                color: white;
+                padding: 18px 35px;
+                border: none;
+                border-radius: 10px;
+                font-size: 18px;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+        .img-presentation {
+            img {
+                width: 500px;
+                height: 650px;
+            }
+        }
+    }
+    .personnalisation-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 70px;
+        gap: 70px;
+        padding: 0px 50px 0px 100px;
+        background-color: white;
+        .txt-personnalisation-menu {
+            h2 {
+                font-size: 30px;
+                margin-bottom: 18px;
+            }
+            P {
+                font-size: 20px;
+                margin-bottom: 20px;
+                text-align: justify;
+            }
+            .lancer {
+                background-color: #ffffff;
+                color: #FF7B00;
+                padding: 18px 35px;
+                border: 2px solid #FF7B00;
+                border-radius: 10px;
+                font-size: 18px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #FF7B00;
+                    color: white;
+                }
+            }
+        }
+        .img-personnalisation-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            img {
+                width: 304px;
+                height: 455px;
+                .img1 {
+                    width: 341px;
+                }
+            }
+        }
+    }
+}
