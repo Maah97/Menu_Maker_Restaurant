@@ -26,7 +26,6 @@ export default function Home() {
                 .min(3, "Minimum 3 caractères"),
             email: Yup.string()
                 .required("Votre email est requis")
-                .min(10, "Minimum 10 caractères")
                 .matches(emailregExp, "Votre email doit être au format mmaj24oado@iyad.emz"),
             message: Yup.string()
                 .required("Votre message est requis")
@@ -140,7 +139,7 @@ export default function Home() {
                     <form onSubmit={formik.handleSubmit} className="form-contact">
                         <div className="bloc-label-input">
                             <label htmlFor="name">Nom</label>
-                            <input type="text" name="name"  value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                            <input type="text" name="name"  value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder='Entrer votre nom' />
                             {formik.touched.name && formik.errors.name && (
                                 <div className='contact-msg-error'>
                                     {formik.errors.name}
@@ -149,7 +148,7 @@ export default function Home() {
                         </div>
                         <div className="bloc-label-input">
                             <label htmlFor="email">Email</label>
-                            <input type='text'  name="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} />
+                            <input type='text'  name="email" value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder='Entrer votre addresse mail' />
                             {formik.touched.email && formik.errors.email && (
                                 <div className='contact-msg-error'>
                                     {formik.errors.email}
@@ -157,16 +156,15 @@ export default function Home() {
                             )}
                         </div>
                         <div className="bloc-label-input">
-
                             <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" value={formik.values.message} onChange={formik.handleChange} onBlur={formik.handleBlur}></textarea>
+                            <textarea name="message" id="message" value={formik.values.message} onChange={formik.handleChange} onBlur={formik.handleBlur} placeholder='Entrer votre message'></textarea>
                             {formik.touched.message && formik.errors.message && (
                                 <div className='contact-msg-error'>
                                     {formik.errors.message}
                                 </div>
                             )}
                         </div>
-                        <button className='envoyer-le-message' type='submit'>Envoyer le message</button>
+                        <button className='btn-envoyer-le-message' type='submit'>Envoyer le message</button>
                     </form>
                 </div>
             </div>
