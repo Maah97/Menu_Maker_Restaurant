@@ -1,0 +1,155 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(228, 228, 228);
+    .bloc1 {
+        margin: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .sous-bloc1-txt {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 100px;
+            .bloc-txt {
+                .txt {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 18px;
+                    border-left: 2px solid rgb(189, 75, 0);
+                    padding: 0px 0px 0px 10px;
+                    cursor: pointer;
+                    color: rgb(78, 31, 0);
+                    font-weight: bold;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                :nth-child(1) {
+                        margin-bottom: 30px;
+                }
+            }
+        }
+        .sous-bloc1-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            .btn-footer-contact-us {
+                padding: 10px 20px;
+                font-size: 18px;
+                font-family: "Nunito", sans-serif;
+                border-radius: 10px;
+                background-color: rgb(255, 202, 167);
+                border: 2px solid rgb(189, 75, 0);
+                color: rgb(78, 31, 0);
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+            .select-langage {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid rgb(189, 75, 0);
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: rgb(255, 202, 167);
+                color: rgb(78, 31, 0);
+                font-weight: bold;
+                gap: 10px;
+                cursor: pointer;
+                &:hover {
+                        background-color: white;
+                        color: black;
+                }
+                i {
+                    font-size: 18px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                }
+                .select-lang-footer {
+                    font-size: 18px;
+                    font-family: "Nunito", sans-serif;
+                    border: none;
+                    background-color: transparent;
+                    color: rgb(78, 31, 0);
+                    font-weight: bold;
+                    cursor: pointer;
+                    &:focus {
+                        outline: none;
+                    }
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                    option {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .bloc2 {
+        padding: 35px 50px;  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid rgba(78, 31, 0, 0.397);
+        .sous-bloc2-txt1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
+            color: rgb(78, 31, 0);
+        }
+        .sous-bloc2-icones {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            .icone {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(197, 197, 197);
+                padding: 8px;
+                border-radius: 5px;
+                cursor: pointer;
+                i {
+                    font-size: 25px;
+                    color: rgb(59, 24, 0);
+                }
+                .image-X-twitter {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        .sous-bloc2-txt2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            a {
+                display: block;
+                font-size: 15px;
+                font-family: "Nunito", sans-serif;
+                font-weight: 700;
+                color: rgb(78, 31, 0);
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
