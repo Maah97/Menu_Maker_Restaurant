@@ -152,4 +152,181 @@ footer {
             }
         }
     }
+    @media (max-width: 1690px) {
+        .bloc1 {
+            margin: 40px;
+            .sous-bloc1-txt {
+                gap: 80px;
+                .bloc-txt {
+                    .txt {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .sous-bloc1-btn {
+                gap: 40px;
+                .btn-footer-contact-us {
+                    padding: 8px 15px;
+                    font-size: 15px;
+                    border-radius: 8px;
+                }
+                .select-langage {
+                    padding: 8px 15px;
+                    border-radius: 8px;
+                    gap: 8px;
+                    i {
+                        font-size: 15px;
+                        margin-right: 3px;
+                    }
+                    .select-lang-footer {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .bloc2 {
+            padding: 25px 30px;  
+            .sous-bloc2-txt1 {
+                font-size: 12px;
+            }
+            .sous-bloc2-icones {
+                gap: 17px;
+                .icone {
+                    padding: 6px;
+                    border-radius: 3px;
+                    i {
+                        font-size: 20px;
+                    }
+                    .image-X-twitter {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .sous-bloc2-txt2 {
+                gap: 25px;
+                a {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    @media (max-width: 1100px) {
+        .bloc1 {
+            margin: 20px;
+            .sous-bloc1-txt {
+                gap: 40px;
+                .bloc-txt {
+                    .txt {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .sous-bloc1-btn {
+                gap: 20px;
+                .btn-footer-contact-us {
+                    padding: 4px 10px;
+                    font-size: 12px;
+                    border-radius: 0px;
+                }
+                .select-langage {
+                    padding: 4px 8px;
+                    border-radius: 0px;
+                    gap: 4px;
+                    i {
+                        font-size: 12px;
+                        margin-right: 3px;
+                    }
+                    .select-lang-footer {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .bloc2 {
+            padding: 17px 20px;  
+            .sous-bloc2-txt1 {
+                font-size: 10px;
+            }
+            .sous-bloc2-icones {
+                gap: 5px;
+                .icone {
+                    padding: 3px;
+                    border-radius: 0px;
+                    i {
+                        font-size: 15px;
+                    }
+                    .image-X-twitter {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            .sous-bloc2-txt2 {
+                gap: 15px;
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        .bloc1 {
+            margin: 20px;
+            .sous-bloc1-txt {
+                gap: 40px;
+                .bloc-txt {
+                    .txt {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .sous-bloc1-btn {
+                gap: 20px;
+                .btn-footer-contact-us {
+                    padding: 4px 10px;
+                    font-size: 12px;
+                    border-radius: 0px;
+                }
+                .select-langage {
+                    padding: 4px 8px;
+                    border-radius: 0px;
+                    gap: 4px;
+                    i {
+                        font-size: 12px;
+                        margin-right: 3px;
+                    }
+                    .select-lang-footer {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .bloc2 {
+            padding: 17px 20px;  
+            .sous-bloc2-txt1 {
+                font-size: 10px;
+            }
+            .sous-bloc2-icones {
+                gap: 5px;
+                .icone {
+                    padding: 3px;
+                    border-radius: 0px;
+                    i {
+                        font-size: 15px;
+                    }
+                    .image-X-twitter {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            .sous-bloc2-txt2 {
+                gap: 15px;
+                a {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
 }
