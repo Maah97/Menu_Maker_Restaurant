@@ -1,12 +1,13 @@
 import logo from '../assets/logo.png'
+import menuHamburger from '../assets/menu-hamburger.svg'
 
 export default function Header() {
     return (
         <header>
             <div className="container">
                 <a href='http://localhost:5173/' className="title-and-logo">
-                    <h1>MENU MAKER <span>by</span></h1>
                     <img className='logo' src={logo} alt="logo" />
+                    <h1>MENU MAKER</h1>
                 </a>
                 <nav>
                     <span>Accueil</span>
@@ -15,6 +16,9 @@ export default function Header() {
                     <span>Contact</span>
                     <span>Se connecter</span>
                 </nav>
+                <div className="menu-hamburger">
+                    <img src={menuHamburger} alt="Image Menu Hamburger" />
+                </div>
             </div>
         </header>
     )

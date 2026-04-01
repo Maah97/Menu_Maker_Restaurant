@@ -18,22 +18,19 @@ header {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            gap: 10px;
             width: 120px;
             height: 60px;
-            margin: 5px 0px 10px 10px;
+            margin: 15px 0px 10px 10px;
             cursor: pointer;
             text-decoration: none;
             color: black;
             h1 {
                 font-family: "Philosopher", sans-serif; 
                 font-size: 15px;
-                font-weight: bold; 
-                span {
-                    font-style: italic; 
-                }
+                font-weight: bold;
             }
             .logo {
-                margin-top: 5px;
                 width: 50%; 
                 height: 70%; 
             }
@@ -58,7 +55,7 @@ header {
             .title-and-logo {
                 width: 110px;
                 height: 50px;
-                margin: 4px 0px 8px 8px;
+                margin: 15px 0px 15px 8px;
                 h1 {
                     font-size: 14px;
                 }
@@ -83,7 +80,7 @@ header {
             .title-and-logo {
                 width: 95px;
                 height: 40px;
-                margin: 2px 0px 5px 5px;
+                margin: 10px 0px 10px 5px;
                 h1 {
                     font-size: 12px;
                 }
@@ -99,6 +96,59 @@ header {
                     font-size: 12px;
                     padding: 3px;
                     border-radius: 3px;
+                }
+            }
+        }
+    }
+    @media (max-width: 800px) {
+        .container {
+            .title-and-logo {
+                width: 100px;
+                height: 50px;
+                margin: 8px 0px 8px 5px;
+                h1 {
+                    font-size: 12px;
+                }
+            }
+            nav {
+                span {
+                    margin: 0px 5px;
+                    font-size: 13px;
+                    padding: 4px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    @media (max-width: 602px) {
+        height: 105px;
+        .container {
+            flex-direction: column;
+            .title-and-logo {
+                align-self: flex-start;
+                flex-direction: row;
+                width: 200px;
+                height: 60px;
+                margin: 0px 0px 5px 0px;
+                h1 {
+                    font-size: 18px;
+                    font-weight: 900;
+                }
+                .logo {
+                    border-radius: 5px;
+                    width: 45px;
+                    height: 35px;
+                }
+            }
+            nav {
+                align-self: flex-start;
+                margin-left: 7px;
+                span {
+                    margin: 0px 7px;
+                    font-size: 13px;
+                    padding: 4px 10px;
+                    background-color: rgb(240, 240, 240);
+                    border-color: rgb(116, 116, 116);
                 }
             }
         }
