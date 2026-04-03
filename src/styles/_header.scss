@@ -49,6 +49,11 @@ header {
                 }
             }
         }
+        .menu-hamburger {
+            width: 40px;
+            height: 40px;
+            display: none;
+        }
     }
     @media (max-width: 1690px) {
         .container {
@@ -121,9 +126,9 @@ header {
         }
     }
     @media (max-width: 602px) {
-        height: 105px;
+        height: 70px;
         .container {
-            flex-direction: column;
+            flex-direction: row;
             .title-and-logo {
                 align-self: flex-start;
                 flex-direction: row;
@@ -141,15 +146,41 @@ header {
                 }
             }
             nav {
-                align-self: flex-start;
-                margin-left: 7px;
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                width: 175px;
+                gap: 10px;
+                top: 55px;
+                background-color: rgb(255, 255, 255);
+                left: calc((100vw - 175px));
+                align-self: flex-end;
+                border-radius: 5px;
+                box-shadow: 10px solid black;
+                border: 1px solid black;
                 span {
-                    margin: 0px 7px;
-                    font-size: 13px;
-                    padding: 4px 10px;
-                    background-color: rgb(240, 240, 240);
-                    border-color: rgb(116, 116, 116);
+                    width: 100%;
+                    text-align: center;
+                    margin: 0px;
+                    border-radius: 0px;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    font-size: 16px;
                 }
+            }
+            .menu-hamburger {
+                display: flex;
+                margin: 0px 10px 0px 0px;
+                cursor: pointer;
+                background-color: rgb(191, 255, 218);
+                border-radius: 7px;
+                &:hover {
+                    background-color: rgb(255, 255, 255);
+                }
+            }
+            nav.active {
+                display: flex;
             }
         }
     }

@@ -333,4 +333,68 @@ footer {
             }
         }
     }
+    @media (max-width: 450px) {
+        .bloc1 {
+            margin: 15px;
+            gap: 25px;
+            .sous-bloc1-txt {
+                gap: 15px;
+                .bloc-txt {
+                    .txt {
+                        font-size: 13px;
+                    }
+                }
+            }
+            .sous-bloc1-btn {
+                gap: 15px;
+                .btn-footer-contact-us {
+                    padding: 1px 4px;
+                    font-size: 14px;
+                }
+                .select-langage {
+                    padding: 1px 4px;
+                    gap: 3px;
+                    i {
+                        font-size: 14px;
+                    }
+                    .select-lang-footer {
+                        font-size: 14px;
+                        option {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .bloc2 {
+            padding: 15px 7px;
+            gap: 15px;  
+            .sous-bloc2-txt1 {
+                font-size: 12px;
+                @media (max-width: 348px) {
+                    font-size: 10px;
+                }
+            }
+            .sous-bloc2-icones {
+                gap: 15px;
+                .icone {
+                    padding: 4px;
+                    border-radius: 7px;
+                    i {
+                        font-size: 20px;
+                    }
+                    .image-X-twitter {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .sous-bloc2-txt2 {
+                gap: 20px;
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }

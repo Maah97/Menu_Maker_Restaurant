@@ -2,6 +2,18 @@ import logo from '../assets/logo.png'
 import menuHamburger from '../assets/menu-hamburger.svg'
 
 export default function Header() {
+    function toggleClass() {
+        const nav = document.querySelector('nav') as HTMLElement;
+        nav.classList.toggle('active');
+        document.addEventListener('click', (e: Event) => {
+            const menuHamburger = document.querySelector('.menu-hamburger') as HTMLElement;
+            const isClickedInsideMenuHamburger = menuHamburger.contains(e.target as Node) || false ;
+            const isClickedInsideMenu = nav.contains(e.target as Node) || false ;
+            if (!isClickedInsideMenuHamburger && !isClickedInsideMenu) {
+                nav.classList.remove('active');
+            }
+        });
+    }
     return (
         <header>
             <div className="container">
@@ -16,7 +28,7 @@ export default function Header() {
                     <span>Contact</span>
                     <span>Se connecter</span>
                 </nav>
-                <div className="menu-hamburger">
+                <div className="menu-hamburger" onClick={toggleClass}>
                     <img src={menuHamburger} alt="Image Menu Hamburger" />
                 </div>
             </div>
