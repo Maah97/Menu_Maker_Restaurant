@@ -102,27 +102,26 @@
                     width: 100%;
                     align-self: flex-start;
                 }
-                .btn-prochain {
-                    display: none;
-                    margin-top: 40px;
-                    width: 50%;
-                    padding: 15px;
-                    background-color: #000000;
-                    color: white;
-                    font-size: 18px;
-                    font-weight: bold;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    border: none;
-                    border-radius: 9999px;
-                    &:hover {
-                        opacity: 0.7;
-                    }
-                }
-                .input-password-login {
+                .input-password-login, .input-repeat-password-login {
                     display: none;
                     align-self: flex-start;
                     width: 100%;
+                }
+                .msg-error-login {
+                    display: none;
+                    align-items: center;
+                    width: 120%;
+                    margin-top: 10px;
+                    color: red;
+                    span {
+                        color: rgb(99, 99, 99);
+                        cursor: pointer;
+                        font-weight: 600;
+                        &:hover {
+                            text-decoration: underline;
+                            color: black;
+                        }
+                    }
                 }
                 .txt-btn-mot-de-passe-oublie {
                     display: none;
@@ -134,7 +133,7 @@
                         cursor: pointer;
                     }
                 }
-                .btn-identification {
+                .btn-submit {
                     display: none;
                     margin-top: 30px;
                     width: 50%;
@@ -152,17 +151,41 @@
                     }
                 }
             }
-            .txt-inscription {
-                font-size: 18px;
-                color: rgb(44, 44, 44);
-                margin-top: 45px;
-                span {
-                    color: #000000;
-                    font-size: 19px;
-                    cursor: pointer;
-                    font-weight: 800;
-                    &:hover {
-                        text-decoration: underline;
+            .separateur-confidialite-et-conditions-utilisation {
+                margin-top: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .txt-condition-utilisation-et-confidentialite {
+                    border-bottom: 1px solid rgb(182, 182, 182);
+                    padding: 15px 5px;
+                    font-size: 18px;
+                    color: rgb(88, 88, 88);
+                    width: 465px;
+                    text-align: center;
+                    span {
+                        color: rgb(44, 44, 44);
+                        cursor: pointer;
+                        font-weight: 800;
+                        &:hover {
+                            text-decoration: underline;
+                            color: black;
+                        }
+                    }
+                }
+                .txt-inscription-identification {
+                    font-size: 18px;
+                    color: rgb(44, 44, 44);
+                    padding-top: 15px;
+                    .btn-switch-inscription-identification {
+                        color: #000000;
+                        font-size: 19px;
+                        cursor: pointer;
+                        font-weight: 800;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
