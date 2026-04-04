@@ -32,26 +32,27 @@ export default function LoginPage() {
         onSubmit: (values) => {
             const inputEmailLogin = document.querySelector('#input-email-login') as HTMLInputElement;
             const msgErrorLogin = document.querySelector('.msg-error-login') as HTMLElement;
-            if (inputEmailLogin.disabled === false) {
-                if (values.email === "mahmoudouaboul@gmail.com") {
-                    inputEmailLogin.value = values.email;
-                    inputEmailLogin.disabled = true;
-                    msgErrorLogin.style.display = "none";
-                    displayInputPasswordLogin();
+            if (isLoginPage) {
+                if (inputEmailLogin.disabled === false) {
+                    if (values.email === "mahmoudouaboul@gmail.com") {
+                        inputEmailLogin.value = values.email;
+                        inputEmailLogin.disabled = true;
+                        msgErrorLogin.style.display = "none";
+                        displayInputPasswordLogin();
+                    } else {
+                        msgErrorLogin.style.display = "flex";
+                    }
                 } else {
-                    msgErrorLogin.style.display = "flex";
+                    if (values.password === "") {
+                        msgErrorLogin.style.display = "flex";
+                        msgErrorLogin.textContent = "Votre mot de passe est requis";
+                    } else if (values.password !== "MaahTech2026") {
+                        msgErrorLogin.style.display = "flex";
+                        msgErrorLogin.textContent = "Votre mot de passe est incorrect";
+                    } else {
+                        console.log("Connexion reussie");
+                    }  
                 }
-            } else {
-                if (values.password === "") {
-                    msgErrorLogin.style.display = "flex";
-                    msgErrorLogin.textContent = "Votre mot de passe est requis";
-                } else if (values.password !== "MaahTech2026") {
-                    msgErrorLogin.style.display = "flex";
-                    msgErrorLogin.textContent = "Votre mot de passe est incorrect";
-                } else {
-                    console.log("Connexion reussie");
-                    
-                }  
             }
         },
     })
@@ -169,6 +170,7 @@ export default function LoginPage() {
                                 <label htmlFor="password">Mot de passe</label>
                                 <i className="fa-solid fa-lock"></i>
                             </div>
+                            div.
                         </div>
                         <div className='input-repeat-password-login'>
                             <div className="input-group">
