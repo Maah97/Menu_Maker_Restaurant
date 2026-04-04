@@ -3,6 +3,7 @@ import './styles/app.scss'
 import Home from "./pages/home.tsx";
 import Footer from './components/footer.tsx'
 import Header from './components/header.tsx'
+import LoginPage from "./pages/loginPage.tsx";
 
 export default function App() {
 
@@ -11,6 +12,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </>

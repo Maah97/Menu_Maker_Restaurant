@@ -18,7 +18,7 @@ export default function Header() {
         <header>
             <div className="container">
                 <a href='http://localhost:5173/' className="title-and-logo">
-                    <img className='logo' src={logo} alt="logo" />
+                    <img className='logo' src={logo} alt="logo Menu Maker" />
                     <h1>MENU MAKER</h1>
                 </a>
                 <nav>

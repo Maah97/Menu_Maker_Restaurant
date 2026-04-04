@@ -31,7 +31,7 @@ export default function Footer() {
             </div>
             <div className="bloc2">
                 <div className="sous-bloc2-txt1">
-                    <i className="fa-regular fa-copyright"></i> {new Date().getFullYear()} -  Menu Maker by MAAH_TECH - All rights reserved.
+                    <i className="fa-regular fa-copyright"></i>&nbsp;{new Date().getFullYear()} -  Menu Maker by MAAH_TECH - All rights reserved.
                 </div>
                 <div className="sous-bloc2-icones">
                     <a className="icone">
