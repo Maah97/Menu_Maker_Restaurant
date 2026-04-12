@@ -63,7 +63,7 @@ export default function LoginPage() {
             } else {
                 if (values.email === "" || values.password === "" || values.repeatPassword === "") {
                     msgErrorLogin.style.display = "flex";
-                    txtmsgErrorLogin.textContent = "Tous les champs obligatoires";
+                    txtmsgErrorLogin.textContent = "Tous les champs sont obligatoires";
                     spanMsgErrorLogin.textContent = "";
                     msgErrorSignUp.style.display = "none";
                 } else {
