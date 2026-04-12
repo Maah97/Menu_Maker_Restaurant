@@ -130,6 +130,7 @@ export default function LoginPage() {
 
     function switchLoginAndSignUpPage() {
         setIsLoginPage(!isLoginPage);
+        const widthScreen = window.innerWidth;
         const bloc1 = document.querySelector('.bloc-1') as HTMLElement;
         const bloc2 = document.querySelector('.bloc-2') as HTMLElement
         const txtIdentificationMail = document.querySelector('.txt-identification-mail') as HTMLElement;
@@ -139,6 +140,7 @@ export default function LoginPage() {
         const msgErrorLogin = document.querySelector('.msg-error-login') as HTMLElement;
         const msgErrorSignUp = document.querySelector('.msg-error-sign-up') as HTMLElement;
         const inputEmailLogin = document.querySelector('#input-email-login') as HTMLInputElement;
+        
         if (txtIdentificationMail.style.display === "none") {
             if (!isLoginPage) {
                 btnSubmit.textContent = "PROCHAIN";
@@ -156,11 +158,22 @@ export default function LoginPage() {
             }
         }
         if (!isLoginPage) {
-            bloc1.style.transform = "translateX(0%)";
-            bloc2.style.transform = "translateX(0%)";
+            if (widthScreen > 770) {
+                bloc1.style.transform = "translateX(0%)";
+                bloc2.style.transform = "translateX(0%)";
+            } else {
+                bloc1.style.transform = "translateY(0%)";
+                bloc2.style.transform = "translateY(0%)";
+            }
+            
         } else {
-            bloc1.style.transform = "translateX(51.51515151%)";
-            bloc2.style.transform = "translateX(-194.11764705882%)";
+            if (widthScreen > 770) {
+                bloc1.style.transform = "translateX(51.51515151%)";
+                bloc2.style.transform = "translateX(-194.11764705882%)";
+            } else {
+                bloc1.style.transform = "translateY(42.85714285714286%)";
+                bloc2.style.transform = "translateY(-233.3333333333333%)";
+            }
             
         }
     }

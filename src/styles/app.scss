@@ -64,6 +64,29 @@ body {
         color: rgb(133, 133, 133);
         font-size: 25px;
     }
+
+    @media (max-width: 1310px) {
+        margin-top: 20px;
+        input {
+            padding: 15px 15px 15px 40px;
+            font-size: 15px;
+        }
+        label {
+            position: absolute;
+            left: 40px;
+            font-size: 15px;
+        }
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            left: 15px;
+            font-size: 12px;
+            padding: 0px 3px;
+        }
+        i {
+            left: 15px;
+            font-size: 18px;
+        }
+    }
 }
 .msg-error {
     align-self: flex-start;
@@ -73,5 +96,13 @@ body {
     i {
         color: red;
         font-size: 17px;
+    }
+
+    @media (max-width: 1310px) {
+        margin-top: 5px;
+        font-size: 12px;
+        i {
+            font-size: 12px;
+        }
     }
 }
