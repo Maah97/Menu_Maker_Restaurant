@@ -1,20 +1,21 @@
 import { Routes, Route } from "react-router-dom";
 import './styles/app.scss'
 import Home from "./pages/home.tsx";
-import Footer from './components/footer.tsx'
-import Header from './components/header.tsx'
-import LoginPage from "./pages/loginPage.tsx";
+import LoginPage from "./pages/login.tsx";
+import DashboardLayout from "./layouts/dashboardLayout.tsx";
+import Dashboard from "./pages/dashboard/dashboard.tsx";
+import MainLayout from "./layouts/mainLayout.tsx";
 
 export default function App() {
-
   return (
-    <>
-      <Header />
-      <Routes>
+    <Routes>
+      <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
-      </Routes>
-      <Footer />
-    </>
+      </Route>
+      <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route index element={<Dashboard />} />
+      </Route>
+    </Routes>
   )
 }

@@ -3,6 +3,8 @@ import * as Yup from "yup"
 import logo from '../assets/logo.png'
 import logoGoogle from '../assets/logoGoogle.svg'
 import { useEffect, useState } from 'react';
+import Footer from '../components/footer.tsx'
+import Header from '../components/header.tsx'
 
 interface LoginFormValues {
   email: string;
@@ -246,77 +248,81 @@ export default function LoginPage() {
     }, [isLoginPage])
 
     return (
-        <section className="login-page">
-            <div className="container-login-page">
-                <div className="bloc-1">
-                    <div className="title-et-logo">
-                        <img className='logo' src={logo} alt="logo Menu Maker" />
-                        <h2 className='title'>MenuMaker</h2>
-                    </div>
-                    <div className="btn-connexion-google">
-                        <div className="logo-google">
-                            <img className='img-google' src={logoGoogle} alt="Logo Google" />
+        <>
+            <Header />
+            <section className="login-page">
+                <div className="container-login-page">
+                    <div className="bloc-1">
+                        <div className="title-et-logo">
+                            <img className='logo' src={logo} alt="logo Menu Maker" />
+                            <h2 className='title'>MenuMaker</h2>
                         </div>
-                        <p className='txt-connexion-google'>{isLoginPage ? "S'identifier avec Google" : "S'inscrire avec Google"}</p>
-                    </div>
-                    <div className="separateur">
-                        <div className="ligne-1"></div>
-                        <p className='txt-separateur'>OU</p>
-                        <div className="ligne-2"></div>
-                    </div>
-                    <p className="txt-identification-mail" onClick={displayInputsElements}>{isLoginPage ? "S'identifier en utilisant un e-mail" : "S'inscrire en utilisant e-mail"}</p>
-                    <form className='form-login' onSubmit={formikLogin.handleSubmit}>
-                        <div className='input-email-login'>
-                            <div className="input-group">
-                                <input id='input-email-login' type="text" name="email" value={formikLogin.values.email} onChange={formikLogin.handleChange} onBlur={formikLogin.handleBlur} placeholder=" "  />
-                                <label htmlFor="email">Courriel</label>
-                                <i className="fa-solid fa-envelope"></i>
+                        <div className="btn-connexion-google">
+                            <div className="logo-google">
+                                <img className='img-google' src={logoGoogle} alt="Logo Google" />
                             </div>
-                            {formikLogin.touched.email && formikLogin.errors.email && (
-                                <div className='msg-error'>
-                                    <i className="fa-solid fa-circle-exclamation"></i>&nbsp;
-                                    {formikLogin.errors.email}
+                            <p className='txt-connexion-google'>{isLoginPage ? "S'identifier avec Google" : "S'inscrire avec Google"}</p>
+                        </div>
+                        <div className="separateur">
+                            <div className="ligne-1"></div>
+                            <p className='txt-separateur'>OU</p>
+                            <div className="ligne-2"></div>
+                        </div>
+                        <p className="txt-identification-mail" onClick={displayInputsElements}>{isLoginPage ? "S'identifier en utilisant un e-mail" : "S'inscrire en utilisant e-mail"}</p>
+                        <form className='form-login' onSubmit={formikLogin.handleSubmit}>
+                            <div className='input-email-login'>
+                                <div className="input-group">
+                                    <input id='input-email-login' type="text" name="email" value={formikLogin.values.email} onChange={formikLogin.handleChange} onBlur={formikLogin.handleBlur} placeholder=" "  />
+                                    <label htmlFor="email">Courriel</label>
+                                    <i className="fa-solid fa-envelope"></i>
                                 </div>
-                            )}
-                        </div>
-                        <div className='input-password-login'>
-                            <div className="input-group">
-                                <input id='input-password-login' type="text" name="password" value={formikLogin.values.password} onChange={formikLogin.handleChange} onBlur={formikLogin.handleBlur} placeholder=" "  />
-                                <label htmlFor="password">Mot de passe</label>
-                                <i className="fa-solid fa-lock"></i>
+                                {formikLogin.touched.email && formikLogin.errors.email && (
+                                    <div className='msg-error'>
+                                        <i className="fa-solid fa-circle-exclamation"></i>&nbsp;
+                                        {formikLogin.errors.email}
+                                    </div>
+                                )}
                             </div>
-                        </div>
-                        <div className='input-repeat-password-login'>
-                            <div className="input-group">
-                                <input id='input-repeat-password-login' type="text" name="repeatPassword" value={formikLogin.values.repeatPassword} onChange={formikLogin.handleChange} onBlur={formikLogin.handleBlur} placeholder=" "  />
-                                <label htmlFor="repeatPassword">Retaper le mot de passe</label>
-                                <i className="fa-solid fa-lock"></i>
+                            <div className='input-password-login'>
+                                <div className="input-group">
+                                    <input id='input-password-login' type="text" name="password" value={formikLogin.values.password} onChange={formikLogin.handleChange} onBlur={formikLogin.handleBlur} placeholder=" "  />
+                                    <label htmlFor="password">Mot de passe</label>
+                                    <i className="fa-solid fa-lock"></i>
+                                </div>
                             </div>
+                            <div className='input-repeat-password-login'>
+                                <div className="input-group">
+                                    <input id='input-repeat-password-login' type="text" name="repeatPassword" value={formikLogin.values.repeatPassword} onChange={formikLogin.handleChange} onBlur={formikLogin.handleBlur} placeholder=" "  />
+                                    <label htmlFor="repeatPassword">Retaper le mot de passe</label>
+                                    <i className="fa-solid fa-lock"></i>
+                                </div>
+                            </div>
+                            <div className="msg-error msg-error-login">
+                                <i className="fa-solid fa-circle-exclamation"></i>&nbsp;
+                                <p className='txt-msg-error-login'></p>
+                                <span className='span-msg-error-login' onClick={switchLoginAndSignUpPage}></span>
+                            </div>
+                            <div className="msg-error msg-error-sign-up">
+                                <p className='error-nbr-caractere-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Mot de passe doit être d'au moins 8 - 50 caractères</p>
+                                <p className='error-nbr-de-chiffre-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Le mot de passe doit contenir au moins 1 chiffre</p>
+                                <p className='error-nbr-de-lettre-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Le mot de passe doit contenir au moins 1 lettre majuscule</p>
+                                <p className='error-nbr-caractere-special-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Le mot de passe doit contenir au moins 1 caractère spécial</p>
+                            </div>
+                            <p className='txt-btn-mot-de-passe-oublie'>Mot de passe oublié ?</p>
+                            <button type='submit' className='btn-submit'></button>
+                        </form>
+                        <div className="separateur-confidialite-et-conditions-utilisation">
+                            {!isLoginPage && <p className='txt-condition-utilisation-et-confidentialite'>En vous inscrivant, vous acceptez de Menu Maker, <span>Conditions d'utilisation</span> et <span>Politique de confidentialité</span></p>}
+                            <p className='txt-inscription-identification'>{isLoginPage ? "Vous n'avez pas de compte ? " : "Vous avez déjà un compte ? "} <span onClick={switchLoginAndSignUpPage} className='btn-switch-inscription-identification'>{isLoginPage ? "S'inscrire" : "S'identifier"}</span></p>
                         </div>
-                        <div className="msg-error msg-error-login">
-                            <i className="fa-solid fa-circle-exclamation"></i>&nbsp;
-                            <p className='txt-msg-error-login'></p>
-                            <span className='span-msg-error-login' onClick={switchLoginAndSignUpPage}></span>
-                        </div>
-                        <div className="msg-error msg-error-sign-up">
-                            <p className='error-nbr-caractere-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Mot de passe doit être d'au moins 8 - 50 caractères</p>
-                            <p className='error-nbr-de-chiffre-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Le mot de passe doit contenir au moins 1 chiffre</p>
-                            <p className='error-nbr-de-lettre-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Le mot de passe doit contenir au moins 1 lettre majuscule</p>
-                            <p className='error-nbr-caractere-special-password'><i className="fa-solid fa-circle-exclamation"></i>&nbsp;Le mot de passe doit contenir au moins 1 caractère spécial</p>
-                        </div>
-                        <p className='txt-btn-mot-de-passe-oublie'>Mot de passe oublié ?</p>
-                        <button type='submit' className='btn-submit'></button>
-                    </form>
-                    <div className="separateur-confidialite-et-conditions-utilisation">
-                        {!isLoginPage && <p className='txt-condition-utilisation-et-confidentialite'>En vous inscrivant, vous acceptez de Menu Maker, <span>Conditions d'utilisation</span> et <span>Politique de confidentialité</span></p>}
-                        <p className='txt-inscription-identification'>{isLoginPage ? "Vous n'avez pas de compte ? " : "Vous avez déjà un compte ? "} <span onClick={switchLoginAndSignUpPage} className='btn-switch-inscription-identification'>{isLoginPage ? "S'inscrire" : "S'identifier"}</span></p>
+                    </div>
+                    <div className="bloc-2">
+                        <h2 className='txt-title-bloc-2'>Connectez vous à <span>MenuMaker</span></h2>
+                        <img className='logo-bloc-2' src={logo} alt="Logo Menu Maker" />
                     </div>
                 </div>
-                <div className="bloc-2">
-                    <h2 className='txt-title-bloc-2'>Connectez vous à <span>MenuMaker</span></h2>
-                    <img className='logo-bloc-2' src={logo} alt="Logo Menu Maker" />
-                </div>
-            </div>
-        </section>
+            </section>
+            <Footer />
+        </>
     )
 }
