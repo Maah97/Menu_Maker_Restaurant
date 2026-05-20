@@ -6,10 +6,8 @@ export default function DashboardLayout() {
   return (
     <div className="dashboard-layout">
       <Sidebar />
-
       <div className="dashboard-main">
         <HeaderDashboard />
-
         <div className="dashboard-content">
           <Outlet />
         </div>

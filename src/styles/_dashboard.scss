@@ -1,0 +1,109 @@
+.dashboard-layout {
+    display: flex;
+    width: 100%;
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 30px 0px 30px;
+        align-items: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        .logo-title {
+            display: flex;
+            align-items: center;
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+            }
+            h1 {
+                font-size: 40px;
+                color: #000000;
+            }
+        }
+        .navigation-dashboard {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            a {
+                font-size: 25px;
+                width: 100%;
+                color: #000000;
+                padding: 30px 20px;
+                margin-top: 20px;
+                border-radius: 5px;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(192, 192, 192);
+                }
+            }
+        }
+        .ligne-de-separation {
+            height: 1px;
+            width: 70%;
+            margin: 50px 0px 40px 0px;
+            background: #7a7a7a;
+        }
+        .footer-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            a {
+                font-size: 20px;
+                width: 100%;
+                color: #000000;
+                padding: 15px 10px;
+                border-radius: 5px;
+                text-align: center;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(190, 190, 190);
+                }
+            }
+        }
+    }
+    .dashboard-main {
+        background-color: #FFF4E8;
+        width: 100%;
+        .header-dashboard {
+            display: flex;
+            width: 100%;
+            background-image: linear-gradient(90deg, rgb(196, 255, 214) 0%,rgb(151, 196, 255) 50%, rgb(254, 216, 255) 100%);
+            box-shadow: 0px 0px 5px rgb(255, 113, 113);
+            padding: 10px 0px 10px 200px;
+            .img-user-profil {
+                background: #ffffff;
+                border-radius: 9999px;
+                width: 180px;
+                height: 180px;
+                padding: 7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 9999px;
+                }
+            }
+            .welcome-and-name-profil {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                p {
+                    font-size: 40px;
+                    color: #000000;
+                    text-align: left;
+                    margin-left: 40px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
